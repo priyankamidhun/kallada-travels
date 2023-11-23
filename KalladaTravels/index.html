@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kallada Travels</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    #header-part {
+        padding-bottom: 0px;
+        background: #fff;
+    }
+
+    #contain {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #logo {
+        margin-top: 1px;
+        max-height: 90px;
+    }
+
+    .agent {
+        float: right;
+        font-size: 15px;
+        font-family: 'Montserrat';
+        color: #232f4e;
+        position: relative;
+        bottom: 26px;
+        margin: 0;
+        border: 1px solid;
+        border-radius: 500px;
+        padding: 7px;
+    }
+
+    #agent-contact {
+        float: right;
+        font-size: 15px;
+        font-family: 'Montserrat';
+        color: #232f4e;
+        position: relative;
+        bottom: 16px;
+    }
+
+    .fa-envelope,
+    .fa-phone {
+        width: 1.28571429em;
+        text-align: center;
+    }
+
+    #infoBar {
+        background: linear-gradient(to right, #9932f5 61%, #495dfb 99%);
+        padding: 0px 0;
+    }
+
+    #info1 {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        font-family: 'Montserrat';
+    }
+
+    #details {
+        background: #efefef75;
+        padding-top: 30px;
+    }
+
+    #destination {
+        font-family: font-family-base;
+        font-size: font-size-base;
+        line-height: line-height-base;
+        color: text-color;
+        background-color: body-bg;
+        font-size: 32px !important;
+        color: #232f4e;
+        font-weight: 700;
+        letter-spacing: 0;
+    }
+
+    #marquee {
+        margin-top: 0px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 100%;
+    }
+
+    #mark {
+        margin: 0;
+        padding: 0 0 0px;
+        margin: 0;
+        width: 100%;
+        float: left;
+        margin-top: 22px;
+        position: relative;
+    }
+
+    .list {
+        display: inline-block;
+        margin: 11px 16px 21px;
+        padding: 25px 5px 0;
+        vertical-align: middle;
+        transition: all 0.3s;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        border-radius: 15px;
+        min-width: 270px;
+        height: 125px;
+        border: 1px solid #cbcbcb;
+    }
+
+    .span {
+        display: block;
+        padding: 0 0 15px;
+        background: url(https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197120/location-bg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
+    .place {
+        line-height: normal;
+        text-align: left;
+        font-style: normal;
+        display: block;
+        vertical-align: middle;
+        font-size: 19px;
+        color: #1d5c8f;
+        font-weight: 400;
+        font-family: Montserrat;
+        padding-left: 50px;
+    }
+
+    .booknowin {
+        word-wrap: normal;
+        white-space: normal;
+        margin: 0 0 12px;
+        position: relative;
+        margin-left: 60px;
+        position: relative;
+        top: 12px;
+    }
+
+    .destinations {
+        display: inline-block;
+        padding: 8px 25px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 400;
+        text-transform: capitalize;
+        background: linear-gradient(45deg, #9532f3 35%, #fc003a 100%);
+        border-radius: 8px;
+        border: 1px solid #fff;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+        font-family: 'Montserrat';
+    }
+
+    .head {
+        font-size: 22px;
+        font-style: normal;
+        color: #878787;
+        line-height: 1.8;
+        font-family: 'Montserrat';
+        font-weight: 600;
+    }
+
+    #about {
+        background: url(https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197125/about-bg.png);
+        height: 350px;
+        padding-top: 40px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #amenties {
+        background: url(https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197161/amenities-bg.png);
+    }
+
+    .each-icon {
+        background: #fff;
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 12px auto;
+        margin-top: -35%;
+        border: 4px solid #fff600;
+    }
+
+    #fact {
+        font-size: 32px !important;
+        text-align: center;
+        font-family: 'Montserrat';
+        color: #232f4e;
+        font-weight: 700;
+        letter-spacing: 0;
+    }
+
+    #fact span,
+    #travels span,
+    #destination span {
+        font-weight: 300;
+        color: #1d5c8f;
+    }
+
+    #common {
+        font-size: 19px !important;
+        text-align: center;
+        font-family: 'Montserrat';
+        color: #a5a5a5;
+        font-weight: 400;
+        padding-bottom: 30px;
+    }
+
+    #million {
+        font-size: 32px !important;
+        text-align: center;
+        font-family: 'Montserrat';
+        color: #2e06fb;
+        font-weight: 700;
+        letter-spacing: 0;
+    }
+
+    #import {
+        font-size: 22px !important;
+        text-align: center;
+        font-family: 'Montserrat';
+        color: #a5a5a5;
+        font-weight: 700;
+    }
+
+    #para {
+        font-size: 14px;
+        font-style: normal;
+        color: #1f1f1f;
+        font-family: 'Montserrat';
+        text-align: center;
+    }
+
+    .icons {
+        transition: width 2s, height 2s, transform 2s;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #travels {
+        font-size: 32px !important;
+        text-align: left;
+        font-family: 'Montserrat';
+        color: #232f4e;
+        font-weight: 700;
+        letter-spacing: 0;
+        margin-top: 20px;
+    }
+
+    #indus {
+        font-size: 16px;
+        font-style: normal;
+        color: #1f1f1f;
+        line-height: 1.8;
+        padding-top: 2%;
+        font-family: 'Montserrat';
+        text-align: justify;
+    }
+
+    #indus span {
+        color: #2e06fb;
+        font-weight: 600;
+    }
+
+    #gallerys {
+        font-size: 32px !important;
+        margin-top: 14px;
+        text-align: center;
+        font-weight: 700;
+        font-family: 'Montserrat';
+        color: #232f4e !important;
+        text-transform: capitalize;
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        z-index: 15;
+        width: 60%;
+        padding-left: 0;
+        margin-left: -30%;
+        text-align: center;
+        list-style: none;
+        bottom: 0 !important;
+        margin-bottom: 0;
+    }
+
+    .carousel-ind {
+        background: #fff;
+        border: 1px solid #fe0003 !important;
+    }
+
+    .carousel-ind li {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 1px;
+        text-indent: -999px;
+        cursor: pointer;
+        background-color: #000 \9;
+        background-color: transparent;
+        border: 1px solid #fff !important;
+        border-radius: 10px;
+    }
+
+    .carousel-ind :active {
+        width: 12px;
+        height: 12px;
+        margin: 0;
+        background-color: #fe0003 !important;
+    }
+
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .tracking {
+        animation: ripple 2s linear infinite;
+        background-color: #004d8a;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: fixed;
+        right: 5%;
+        top: 40%;
+        z-index: 1;
+    }
+
+    .tracking-image {
+        background: url(tracking-e7c76b7….png) no-repeat left bottom;
+        height: 49px;
+        width: 50px;
+    }
+
+    #testimonials {
+        background: url(https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197158/testi-bg.png);
+        height: 340px;
+        background-size: cover;
+        margin-top: 0%;
+        padding: 0px 0px 0px 0;
+    }
+
+    #test {
+        font-size: 32px !important;
+        font-family: 'Montserrat';
+        color: #232f4e;
+        font-weight: 700;
+        text-transform: capitalize !important;
+    }
+
+    #slide {
+        font-family: 'Montserrat';
+    }
+
+    #details {
+        padding-bottom: 30px;
+        padding-top: 30px;
+        background: url(https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/195214/contact-bg.png);
+    }
+
+    #frame {
+        border: 1px solid #9f9f9f;
+        background: #e9e9e9;
+        width: 350px;
+    }
+
+    .parallel {
+        color: #c9730d;
+        font-size: 35px;
+        vertical-align: middle;
+        padding: 0.8em 0.1em 0.4em 0em;
+        float: left;
+    }
+
+    #log {
+        display: block;
+        margin: 0px 0px 8px;
+        color: #000;
+        font-size: 18px;
+        font-family: 'Montserrat';
+    }
+
+    #hash {
+        font-size: 16px;
+        text-decoration: none;
+        color: #000;
+        outline: none;
+        font-family: 'Montserrat';
+    }
+
+    footer {
+        background: linear-gradient(to right, #8632f5 39%, #3546cf 99%);
+        font-family: 'Montserrat';
+    }
+</style>
+
+<body>
+
+    <section id="header-part">
+        <div class="container" id="contain">
+            <div class="row">
+                <nav class="navbar">
+                    <div class="container-fluid" id="contain">
+                        <div class="navbar-header">
+                            <a href="" id="logo">
+                                <img src="https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197159/logo1.png"
+                                    alt="logo" width="250px">
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+                <p id="agent-contact">
+                    <span>
+                        <i class="fa-solid fa-envelope"></i>kalladagrp@gmail.com
+                        <i class="fa-solid fa-phone"></i>+91 9349025000 &nbsp;&nbsp;
+                    </span>
+                </p>
+                <a href="" class="agent" style="text-decoration: none; width: 150px; text-align: center;">Agent
+                    Registration</a>
+                <a href="" class="agent" style="text-decoration: none; width: 100px; text-align: center;">Agent
+                    Login</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="header-part">
+        <div class="container"></div>
+        <nav class="d-flex">
+            <img src="./assets/logo1.png" alt="" width="250px">
+            <ul class="d-flex">
+                <div class="icon  d-flex">
+                    <a href=""><i style="color: black;" class="fa-solid fa-envelope"></i></a>
+                    <li>kalladagrp@gmail.com</li>
+                </div>
+                <div class="icon d-flex">
+                    <a href=""><i style="color: black;" class="fa-solid fa-phone"></i></a>
+                    <li>+91 9349025000</li>
+                </div>
+                <button style="border-radius: 80px;">Agent Registration</button>
+                <button style="border-radius: 20px;">Agent Login</button>
+            </ul>
+        </nav>
+        </div>
+    </section> -->
+
+    <section id="infoBar">
+        <div class="container" id="info1">
+            <nav>
+                <ul class="d-flex p-2 text-light" style="list-style-type: none;">
+                    <li class="ps-5">Home</li>
+                    <li class="ps-5">Manage Bookings</li>
+                    <li class="ps-5">Gallery</li>
+                    <li class="ps-5">About Us</li>
+                    <li class="ps-5">Contact</li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section id="banner">
+        <div class="container-fluid">
+            <div>
+                <img src="./assets/banner_banner.jpg" alt="" width="100%">
+            </div>
+            <!-- <div class="row">
+            <div class="col-3">Origin</div>
+            <div class="col-3">Destination</div>
+            <div class="col-2"></div>
+            <div class="col-2">Return</div>
+            <div class="col-2"></div>
+        </div> -->
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 id="destination" class="text-center mt-3"><span> Top </span> Destinations</h2>
+            <marquee id="marquee" width="60%" direction="left" height="100px">
+                <ul id="mark">
+                    <li class="list">
+                        <span class="span">
+                            <i class="place">Thrissur</i>
+                            <i class="place">Bangalore</i>
+                        </span>
+                        <div class="booknowin">
+                            <a href="" class="destinations" style="text-decoration: none;">Book Now</a>
+                        </div>
+                    </li>
+                    <li class="list">
+                        <spa class="span" n>
+                            <i class="place">Thrissur</i>
+                            <i class="place">Salem</i>
+                            </span>
+                            <div class="booknowin">
+                                <a href="" class="destinations" style="text-decoration: none;">Book Now</a>
+                            </div>
+                    </li>
+                    <li class="list">
+                        <span class="span">
+                            <i class="place">Thrissur</i>
+                            <i class="place">Krishnagiri</i>
+                        </span>
+                        <div class="booknowin">
+                            <a href="" class="destinations" style="text-decoration: none;">Book Now</a>
+                        </div>
+                    </li>
+                    <li class="list">
+                        <span class="span">
+                            <i class="place">Kottayam</i>
+                            <i class="place">Bangalore</i>
+                        </span>
+                        <div class="booknowin">
+                            <a href="" class="destinations" style="text-decoration: none;">Book Now</a>
+                        </div>
+                    </li>
+                    <li class="list">
+                        <span class="span">
+                            <i class="place">Kottayam</i>
+                            <i class="place">Krishnagiri</i>
+                        </span>
+                        <div class="booknowin">
+                            <a href="" class="destinations" style="text-decoration: none;">Book Now</a>
+                        </div>
+                    </li>
+                    <li class="list">
+                        <span class="span">
+                            <i class="place">Kottayam</i>
+                            <i class="place">Salem</i>
+                        </span>
+                        <div class="booknowin">
+                            <a href="" class="destinations" style="text-decoration: none;">Book Now</a>
+                        </div>
+                    </li>
+                    <li class="list">
+                        <span class="span">
+                            <i class="place">Kazhakootam</i>
+                            <i class="place">Bangalore</i>
+                        </span>
+                        <div class="booknowin">
+                            <a href="" class="destinations" style="text-decoration: none;">Book Now</a>
+                        </div>
+                    </li>
+                    <li class="list">
+                        <span class="span">
+                            <i class="place">Ernakulam</i>
+                            <i class="place">Salem</i>
+                        </span>
+                        <div class="booknowin">
+                            <a href="" class="destinations" style="text-decoration: none;">Book Now</a>
+                        </div>
+                    </li>
+                    <li class="list">
+                        <span class="span">
+                            <i class="place">Ochira</i>
+                            <i class="place">Bangalore</i>
+                        </span>
+                        <div class="booknowin">
+                            <a href="" class="destinations" style="text-decoration: none;">Book Now</a>
+                        </div>
+                    </li>
+                    <li class="list">
+                        <span class="span">
+                            <i class="place">Chavara</i>
+                            <i class="place">Bangalore</i>
+                        </span>
+                        <div class="booknowin">
+                            <a href="" class="destinations" style="text-decoration: none;">Book Now</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </marquee>
+        </div>
+    </section>
+
+    <section id="paragraph">
+        <div class="container-fluid" style="margin-top: 130px;">
+            <h6 class="head mt-5 text-center">We at <span style="color: #2e06fb;">Kallada Travelss </span> strive to
+                maintain the most reasonable rates in
+                the market.</h6>
+            <p class="text-center" style="font-family: Montserrat;">This also makes our passengers happy and thus we
+                further give them discount offers
+                on<br>
+                a regular basis to enhance their happiness.</p>
+        </div>
+    </section>
+
+    <img src="./assets/border.png" alt="">
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-7">
+                    <div class="about-us">
+                        <h3 id="travels"><span> About </span> Kallada Travels</h3>
+                        <p id="indus"><span style="color: #2e06fb;"> Kallada Travels </span> is a renowned brand in the
+                            bus operating industry. Our vision is to give a new <br>
+                            face to the bus industry. Since our inception passenger comfort was our top priority. We
+                            have <br>
+                            frequently added luxury buses to our huge fleet of buses. <br>
+                            <span style="color: #2e06fb;">Kallada Travels has been in the traveling business.</span><br>
+                            We thanking to all our valuable customers!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="amenties">
+        <div class="container p-5">
+            <div class="row">
+                <h2 class="text-light text-center mb-5">Our Amenities</h2>
+                <div class="col-md-2 mt-4 ps-5">
+                    <div class="each-icon">
+                        <img src="https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197127/01.png"
+                            alt="">
+                    </div>
+                    <p class="text-light text-center">Charging Point</p>
+                </div>
+                <div class="col-md-2 mt-4 ps-5">
+                    <div class="each-icon">
+                        <img src="https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197128/02.png"
+                            alt="">
+                    </div>
+                    <p class="text-light text-center">Blanket & Pillow</p>
+                </div>
+                <div class="col-md-2 mt-4 ps-5">
+                    <div class="each-icon">
+                        <img src="https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197129/03.png"
+                            alt="">
+                    </div>
+                    <p class="text-light text-center">Customer Support</p>
+                </div>
+                <div class="col-md-2 mt-4 ps-5">
+                    <div class="each-icon">
+                        <img src="https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197130/04.png"
+                            alt="">
+                    </div>
+                    <p class="text-light text-center">Live Tracking</p>
+                </div>
+                <div class="col-md-2 mt-4 ps-5">
+                    <div class="each-icon">
+                        <img src="https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197131/05.png"
+                            alt="">
+                    </div>
+                    <p class="text-light text-center">Emergency Exit</p>
+                </div>
+                <div class="col-md-2 mt-4 ps-5">
+                    <div class="each-icon">
+                        <img src="https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197132/06.png"
+                            alt="">
+                    </div>
+                    <p class="text-light text-center">Toilet</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="specification">
+        <div class="container" style="margin-top: 20px;">
+            <div class="row">
+                <div class="col-6">
+                    <h2 id="fact"><span>Some of </span> Our Facts</h2>
+                    <h6 id="common">Why you book with us?</h6>
+                    <div class="row mt-5">
+                        <div class="col-6">
+                            <h3 id="million">1+ M</h3>
+                            <h4 id="import">CUSTOMERS</h4>
+                            <p id="para">Kallada Travels is trusted by over 1 million happy customers.</p>
+                        </div>
+                        <div class="col-6">
+                            <h3 id="million">1000+</h3>
+                            <h4 id="import">ROUTES</h4>
+                            <p id="para">Total routes covered by live tracking.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <h3 id="million">10+ M</h3>
+                            <h4 id="import">BUS TICKETS</h4>
+                            <p id="para">Over 1 million trips booked using Kallada Travels.</p>
+                        </div>
+                        <div class="col-6">
+                            <h3 id="million">10000+</h3>
+                            <h4 id="import">BUSES</h4>
+                            <p id="para">Total buses currently being tracked.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h2 id="fact"><span>Our </span> Salient Features</h2>
+                    <h6 id="common">We at Kallada Travels have added some great features to create an all-round
+                        comfortable ride for
+                        our passengers.</h6>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-3 col-xs-6">
+                            <div class="icons">
+                                <img src="https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197134/01.png"
+                                    alt="">
+                            </div>
+                            <p>E-Ticketing</p>
+                        </div>
+                        <div class="col-md-4 col-sm-3 col-xs-6">
+                            <div class="icons">
+                                <img src="https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197135/02.png"
+                                    alt="">
+                            </div>
+                            <p>Phone Booking</p>
+                        </div>
+                        <div class="col-md-4 col-sm-3 col-xs-6">
+                            <div class="icons">
+                                <img src="https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197136/03.png"
+                                    alt="">
+                            </div>
+                            <p>Return Ticket</p>
+                        </div>
+                        <div class="col-md-4 col-sm-3 col-xs-6">
+                            <div class="icons">
+                                <img src="https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197137/04.png"
+                                    alt="">
+                            </div>
+                            <p>Cancellation On Net</p>
+                        </div>
+                        <div class="col-md-4 col-sm-3 col-xs-6">
+                            <div class="icons">
+                                <img src="https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197138/05.png"
+                                    alt="">
+                            </div>
+                            <p>Ladies Seats</p>
+                        </div>
+                        <div class="col-md-4 col-sm-3 col-xs-6">
+                            <div class="icons">
+                                <img src="https://gst-contracts.s3.amazonaws.com/uploads/bcc/cms/asset/avatar/197139/06.png"
+                                    alt="">
+                            </div>
+                            <p>Customer Service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container-fluid" style="background-color: rgb(217, 214, 214);">
+            <h2 class="text-center" id="gallerys">Gallery</h2>
+            <div class="row">
+                <div id="carouselExampleIndicators" class="carouselSlide" data-bs-ride="carousel">
+                    <ol class="carousel-indicators" id="red">
+                        <li data-target="carouselExampleIndicators" data-slide-to="0" class="carousel-ind"></li>
+                        <li data-target="carouselExampleIndicators" data-slide-to="1" class="carousel-ind"></li>
+                        <li data-target="carouselExampleIndicators" data-slide-to="2" class="carousel-ind"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="col-md-3">
+                                <a href="">
+                                    <img src="./assets/gallery_01.png" alt="" style="max-width: 100%;">
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="">
+                                    <img src="./assets/gallery_02.png" alt="" style="max-width: 100%;">
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="">
+                                    <img src="./assets/gallery_03.png" alt="" style="max-width: 100%;">
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="">
+                                    <img src="./assets/gallery_04.png" alt="" style="max-width: 100%;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <a href="" class="red">
+                                    <img src="./assets/gallery_05.png" alt="" style="max-width: 100%;">
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="">
+                                    <img src="./assets/gallery_06.png" alt="" style="max-width: 100%;">
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="">
+                                    <img src="./assets/gallery_07.png" alt="" style="max-width: 100%;">
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="">
+                                    <img src="./assets/gallery_08.png" alt="" style="max-width: 100%;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-3">
+                                <a href="">
+                                    <img src="./assets/gallery_09.png" alt="" style="max-width: 100%;">
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="">
+                                    <img src="./assets/gallery_10.png" alt="" style="max-width: 100%;">
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="">
+                                    <img src="./assets/gallery_11.png" alt="" style="max-width: 100%;">
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="">
+                                    <img src="./assets/gallery_12.png" alt="" style="max-width: 100%;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <div class="tracking">
+        <img src="./assets/trackingo-icon-1dff49a9bc0208f6c116f80dbe86412fcfcd074bdea8b0ae2a6299a5ebc48f97.png" alt=""
+            style="color: #337ab7;" width="35px">
+        <a href="" target="_blank" style="text-decoration: none;">
+            <div class="tracking-image"></div>
+        </a>
+    </div>
+
+    <section id="testimonials">
+        <div class="container">
+            <div>
+                <h2 id="test" class="text-center mt-5">Testimonials</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="col-5"></div>
+                <div class="col-7">
+                    <div class="carousel-inner">
+                        <div class="item">
+                            <div class="testimonial4_slide">
+                                <p id="slide">I travelled with Kallada Travels a couple of days back. I was in a rush as
+                                    my dad was feeling
+                                    <br>
+                                    unwell and had to reach the hospital which was 6 hours away as soon as I could. I
+                                    booked a
+                                    <br>
+                                    seat with Kallada Travels and to my surprise, they helped me reach before the time
+                                    of
+                                    arrival.
+                                </p>
+                                <h4 id="slide" style="padding-left: 500px;">Lakshman</h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial4_slide">
+                                <p id="slide">I traveled from Thrissur to Salem in Kallada Travels with my friends. The
+                                    buses were <br>
+                                    well-maintained and the staff was very courteous towards us. It feels great to be
+                                    traveling
+                                    <br>
+                                    on a bus operating company that shows complete concern towards passenger's comfort.
+                                </p>
+                                <h4 id="slide" style="padding-left: 500px;">Kajal</h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial4_slide">
+                                <p id="slide">I recently travelled from Kollam to Bangalore with Kallada Travels. It was
+                                    a sleeper bus and
+                                    I felt the bus was very comfortable and the staff was very friendly and
+                                    co-operative. Great
+                                    going Kallada Travels keep it up.</p>
+                                <h4 id="slide" style="padding-left: 500px;">Arpita</h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonial4_slide">
+                                <p id="slide">Travelling to places through Kallada Travels is always affordable,
+                                    convenient, and
+                                    satisfactory. One of the finest bus operating services. The travel experience was
+                                    awesome.
+                                    You guys respect the passengers which none of the travels does. Please keep this in
+                                    practice
+                                    and one day you will be the best travels across. Very clean and value for money.
+                                    Good job
+                                    guys.</p>
+                                <h4 id="slide" style="padding-left: 500px;">Rajesh</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <a href="" class="left Carousel-control" role="button" data-slide="prev"></a>
+            <a href="" class="right Carousel-control" role="button" data-slide="next"></a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="details" style="margin-top: 300px;">
+        <div class="container">
+            <div class="col-md-4" id="frame" style="display: inline-block;">
+                <i class="fa fa-phone parallel"></i>
+                <div>
+                    <p id="log">FOR PHONE BOOKINGS 24*7</p>
+                    <span>
+                        <a href="" id="hash">+91 9349025000</a>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4" id="frame" style="display: inline-block;">
+                <i class="fa-regular fa-envelope parallel"></i>
+                <div>
+                    <p id="log">Online Booking Support</p>
+                    <span>
+                        <a href="" id="hash">kalladagrp@gmail.com</a>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4" id="frame" style="display: inline-block;">
+                <i class="fa fa-phone parallel"></i>
+                <div>
+                    <p id="log">E-Payment Related Issue</p>
+                    <span>
+                        <a href="" id="hash">080 46333629</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="wrapper-footer">
+        <div class="container" style="color: white;">
+            <div class="main-top-footer">
+                <aside class="col-sm-3" style="display: inline-block;">
+                    <h3>Contact</h3>
+                    <div>
+                        <ul style="list-style: none;">
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                <span>
+                                    <span>Kallada Travels G4</span><br>
+                                    XVI/12, kallada Travels, Tana, <br>
+                                    Irinjalakuda,Thrissur, Irinjalakuda, <br>
+                                    Kerala -680121
+                                </span>
+                            </li>
+                            <li class="mt-2">
+                                <i class="fa fa-phone"></i>
+                                9387070000
+                            </li>
+                            <li class="mt-2">
+                                <i class="fa fa-envelope"></i>
+                                <a href="" style="text-decoration: none; color: white;">kalladagrp@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <aside style="display: inline-block;">
+                    <h3>Quick Links</h3>
+                    <div style="font-size: small;">
+                        <ul style="list-style: none;">
+                            <li style="display: inline-flex;">
+                                <a href="" style="text-decoration: none; color: white;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                    Offers
+                                </a>
+                            </li>
+                            <li style="display: inline-flex; padding-left: 100px;">
+                                <a href="" style="text-decoration: none; color: white;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                    Gallery
+                                </a>
+                            </li>
+                            <li style="display: inline-flex; padding-left: 100px;">
+                                <a href="" style="text-decoration: none; color: white;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                    About Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div style="font-size: small;">
+                        <ul style="list-style: none;">
+                            <li style="display: inline-flex;">
+                                <a href="" style="text-decoration: none; color: white;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                    Contact
+                                </a>
+                            </li>
+                            <li style="display: inline-flex; padding-left: 90px;">
+                                <a href="" style="text-decoration: none; color: white;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                    Testimonials
+                                </a>
+                            </li>
+                            <li style="display: inline-flex; padding-left: 70px;">
+                                <a href="" style="text-decoration: none; color: white;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                    Feedback
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div style="font-size: small;">
+                        <ul style="list-style: none;">
+                            <li style="display: inline-flex;">
+                                <a href="" style="text-decoration: none; color: white;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                    Schedules
+                                </a>
+                            </li>
+                            <li style="display: inline-flex; padding-left: 75px;">
+                                <a href="" style="text-decoration: none; color: white;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li style="display: inline-flex; padding-left: 60px;">
+                                <a href="" style="text-decoration: none; color: white;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div style="font-size: small;">
+                        <ul style="list-style: none;">
+                            <li style="display: inline-flex;">
+                                <a href="" style="text-decoration: none; color: white;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                    Sitemap
+                                </a>
+                            </li>
+                            <li style="display: inline-flex; padding-left: 90px;">
+                                <a href="" style="text-decoration: none; color: white;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                    Agent Login
+                                </a>
+                            </li>
+                            <li style="display: inline-flex; padding-left: 70px;">
+                                <a href="" style="text-decoration: none; color: white;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                    Agent Registration
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div style="font-size: small;">
+                        <ul style="list-style: none;">
+                            <li style="display: inline-flex;">
+                                <a href="" style="text-decoration: none; color: white;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                    FAQS
+                                </a>
+                            </li>
+                            <li style="display: inline-flex; padding-left: 100px;">
+                                <a href="" style="text-decoration: none; color: white;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                    Confirm Phone Booking
+                                </a>
+                            </li>
+                            <li style="display: inline-flex; padding-left: 2px;">
+                                <a href="" style="text-decoration: none; color: white;">
+                                    <i class="fa fa-angle-double-right"></i>
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <aside style="display: inline-block;">
+                    <div>
+                        <h3 style="margin-bottom: 200px;">Follow Us</h3>
+                        <p>
+                            <a href="">
+                                <i class="fa-brands fa-facebook-square" style="color: white;"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-brands fa-square-twitter-square" style="color: white;"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-brands fa-youtube-square" style="color: white;"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-brands fa-linkedin-square" style="color: white;"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-brands fa-instagram" style="color: white;"></i>
+                            </a>
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <hr style="color: white;" class="mb-5">
+
+        <div class="right_footer text-center">
+            <p style="color: white;">© 2023 All rights reserved.
+                <a href="" style="color: white; text-decoration: none;">Kallada Travels G4</a>
+            </p>
+        </div>
+
+    </footer>
+
+</body>
